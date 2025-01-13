@@ -4,10 +4,8 @@ import 'adminpanel.dart';
 import 'exams.dart';
 import 'parentalAcces.dart';
 import 'schoolInquairy.dart';
-
-import 'studentPayment.dart';
-
 import 'student_addmission.dart';
+import 'students_data.dart';
 
 void main() {
   print(' ===(  hello wellcome to GB school  )===');

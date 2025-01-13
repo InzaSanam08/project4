@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'student_addmission';
 
 adminPanel(){
 print('hello wellcome to admin panel ');
@@ -49,7 +48,7 @@ print('if you want to see attendance of students enter number 3');
 var adminInput = stdin.readLineSync()!;
 
 if (adminInput == 1) {
-  admission_Portal;
+  
 } else {
   
 }

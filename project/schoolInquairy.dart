@@ -120,20 +120,20 @@ print('''
   =================================== 
 
 
-1 => Play Group	2-3 Years
-2 => Nursery	3-4 Years
-3 => KG I	4-5 Years
-4 => KG II	5-6 Years
-5 => 1	6-7 Years
-6 => 2	7-8 Years
-7 => 3	8-9 Years
-8 => 4	9-10 Years
-9 => 5	10-11 Years
-10 => 6	11-12 Years
-11 => 7	12-13 Years
-12 => 8	13-14 Years
-13 => 9	14-15 Years
-14 => 10	15-16 Years
+1 =>   Play Group	2-3 Years
+2 =>   Nursery	3-4 Years
+3 =>   KG I	4-5 Years
+4 =>   KG II	5-6 Years
+5 =>   Class 1	6-7 Years
+6 =>   Class 2	7-8 Years
+7 =>   Class 3	8-9 Years
+8 =>   Class 4	9-10 Years
+9 =>   Class 5	10-11 Years
+10 =>  Class 6	11-12 Years
+11 =>  Class 7	12-13 Years
+12 =>  Class 8	13-14 Years
+13 =>  Class 9	14-15 Years
+14 =>  Class 10	15-16 Years
 ''');
 }
 

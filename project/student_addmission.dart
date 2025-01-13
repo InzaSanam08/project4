@@ -1,68 +1,53 @@
-
 import 'dart:io';
 
-
- List<Map<String, dynamic>> studentsData = [
-    {
-      'studentName': 'Rehman Ali',
-      'father name': 'Imran Ali',
-      'age': 19,
-      'date of birth': '23/1/2022',
-      'address': 'DHA phase the rooling park'
-    },
-    {
-      'studentName': 'Sajad Ali',
-      'father name': 'Dawood Alam',
-      'age': 12,
-      'date of birth': '2/12/2000',
-      'address': 'malir quaid abad karachi'
-    },
-    {
-      'studentName': ' Ali',
-      'father name': 'Ahmed Ali',
-      'age': 10,
-      'date of birth': '2/1/2012',
-      'address': 'gulshan e iqbal khokhar park'
-    },
-    {
-      'studentName': 'Jameel',
-      'father name': 'Babar Ali',
-      'age': 11,
-      'date of birth': '2/12/2013',
-      'address': 'malir karachi'
-    }
-  ];
-
-
-
-
-
-
+List<Map<String, dynamic>> studentsData = [
+  {
+    'studentName': 'Rehman Ali',
+    'father name': 'Imran Ali',
+    'age': 19,
+    'date of birth': '23/1/2022',
+    'address': 'DHA phase the rooling park',
+    'ispayed': '3000'
+  },
+  {
+    'studentName': 'Sajad Ali',
+    'father name': 'Dawood Alam',
+    'age': 12,
+    'date of birth': '2/12/2000',
+    'address': 'malir quaid abad karachi',
+    'ispayed': '3000'
+  },
+  {
+    'studentName': ' Ali',
+    'father name': 'Ahmed Ali',
+    'age': 10,
+    'date of birth': '2/1/2012',
+    'address': 'gulshan e iqbal khokhar park',
+    'ispayed': '3000'
+  },
+  {
+    'studentName': 'Jameel',
+    'father name': 'Babar Ali',
+    'age': 11,
+    'date of birth': '2/12/2013',
+    'address': 'malir karachi',
+    'ispayed': 'no pay found'
+  }
+];
 
 //////////////////////////////////////////////////////
-
-
-// String? studentName;
-// String? studentFatherName;
-// String? studentAge;
-// String? studentDateOfBirth;
-// String? studentAddress;
 
 studentadmission() {
   bool isadmitted = true;
   while (isadmitted) {
-
-
-
     // Get Student Name
     while (true) {
       print('Enter student name:');
       String studentName = stdin.readLineSync()!;
 
       if (studentName.isNotEmpty) {
-studentsData.add({'student Name': studentName});
+        studentsData.add({'student Name': studentName});
         break;
-
       } else {
         print('You did not enter the name correctly.');
       }
@@ -87,8 +72,7 @@ studentsData.add({'student Name': studentName});
       String studentAge = stdin.readLineSync()!;
 
       if (studentAge.isNotEmpty) {
-          
-           studentsData.last.addAll({'studentAge':studentAge});
+        studentsData.last.addAll({'studentAge': studentAge});
 
         break;
       } else {
@@ -102,7 +86,7 @@ studentsData.add({'student Name': studentName});
       String studentDateOfBirth = stdin.readLineSync()!;
 
       if (studentDateOfBirth.isNotEmpty) {
-         studentsData.last.addAll({'student Date Of Birth':studentDateOfBirth});
+        studentsData.last.addAll({'student Date Of Birth': studentDateOfBirth});
         break;
       } else {
         print('You did not enter date of birth correctly.');
@@ -115,13 +99,37 @@ studentsData.add({'student Name': studentName});
       String studentAddress = stdin.readLineSync()!;
 
       if (studentAddress.isNotEmpty) {
-        
-         studentsData.last.addAll({'studentAddress':studentAddress});
+        studentsData.last.addAll({'studentAddress': studentAddress});
         break;
       } else {
         print('You did not enter address correctly. Please enter address:');
       }
     }
+
+
+//   school fee  pay 
+     while (true) {
+    print('please pay RS: 3000 ');
+print('if you dont want to pay now then please press enter ');
+
+
+    String isPaid = stdin.readLineSync()!;
+
+    if (isPaid == '3000') {
+      studentsData.last.addAll({'isPaid': isPaid});
+      break;
+    } 
+    else if (isPaid.isEmpty){
+     print('you did not payed admission fees  gb school gives you time of 1 month ');
+     if(isPaid.isEmpty){
+      studentsData.last.addAll({'isPaid':'user will pay after one month'});
+   break;
+     }
+    }
+    else {
+      print('You did not paid fess:');
+    }
+  }
 
     // Admission Process Completed
 
@@ -142,154 +150,5 @@ studentsData.add({'student Name': studentName});
     print(studentsData.last);
   }
 
-
-   while (true) {
-      print('Enter your address:');
-       
-       bool isPaid = bool.parse(stdin.readLineSync()!);
-
-      if (isPaid==true ) {
-        
-         studentsData.last.addAll({'isPaid':isPaid });
-        break;
-      } else {
-        print('You did not paid fess:');
-      }
-    }
-
-
-  // Map<String, dynamic> student = {
-  //   'studentName': studentName,
-  //   'father name': studentFatherName,
-  //   'age': studentAge,
-  //   'date of birth': studentDateOfBirth,
-  //   'address': studentAddress
-  // };
-  
-  
-  
+ 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// import 'dart:io';
-
-// List<Map<String, dynamic>> admission_Portal = [];
-
-// studentAdmission() {
-//   bool isadmitted = true;
-//   while (isadmitted) {
-
- 
-
-//   while (true) {
-//     print('Enter student name:');
-//  String   studentName = stdin.readLineSync()!;
-
-//     if (studentName != null && studentName.isNotEmpty) {
-//       break;  // Valid name entered, exit the loop
-//     } else {
-//       print('You did not enter the name correctly. Please enter student name:');
-//     }
-//   }
-
-
-
-// // /////////////////////////////////////////////////////////////////////
-
-// while(true)
-// {    print('enter student father name ');
-//     String studentFatherName = stdin.readLineSync()!;
-
-//  if(studentFatherName != null && studentFatherName.isNotEmpty) {
-//  break;
-//  }
-// else{    print('you did not entered Father name correctly enter Father name ');}}
-
-// /////////////////////////////////////////////////////////////////////
-
-// while(true)
-//   {  print('enter student age ');
-//    String studentAge = stdin.readLineSync()!;
-
-//  if(studentAge != null && studentAge.isNotEmpty) {
-//     break;
-// }
-// else{
- 
-//   print('you did not entered Age  correctly enter the Age ');
-// }
-// /////////////////////////////////////////////////////////////////////
-// while(true)
-// {print('enter student dateOfBirth like this 23/2/2025 ');
-//     String studentDateOfBirth = stdin.readLineSync()!;
-
-//  if(studentDateOfBirth != null && studentDateOfBirth.isNotEmpty) {
-// break;
-// }
-// else{
-//       print('you did not entered Date of Birth correctly enter Date of Birth ');}}
-
-
-// /////////////////////////////////////////////////////////////////////
-//   while(true)
-  
-//   {
-//       print('enter your adderess ');
-//     String studentAddress = stdin.readLineSync()!;
-
-//     if(studentAddress != null && studentAddress.isNotEmpty) {
-//   break;
-//     }
-//     else{
-//       print('you did not entered Address correctly enter Address ');
-//     }
-
-// /////////////////////////////////////////////////////////////////////
-
-// isadmitted = false;
-    // if (studentName == null) {
-    //   print('enter your name correctly');
-    //   String studentName = stdin.readLineSync()!;
-    // } else if (studentFatherName == null) {
-    //   print('enter your father name correctly');
-    //   String studentFatherName = stdin.readLineSync()!;
-    // } else if (studentAge == null) {
-    //   print('enter your age correctly');
-    //   int studentAge = int.parse(stdin.readLineSync()!);
-    // } else if (studentDateOfBirth == null) {
-    //   print('enter your age correctly');
-    //   String studentDateOfBirth = stdin.readLineSync()!;
-    // } else if (studentAge == null) {
-    //   print('enter your age correctly');
-    //   String studentAge = stdin.readLineSync()!;
-    // } else {
-     
-    // isadmitted = false;
-    // }
-
-    // Map<String, dynamic> student = {
-    //   'studentName': studentName,
-    //   'father name': studentFatherName,
-    //   'age': studentAge,
-    //   'date of birth': studentDateOfBirth,
-    //   'address': studentAddress
-    // };
-
-    // admission_Portal.add(student);
-    // print(admission_Portal);
-
-//   }
-// }
-
-
-//   }}

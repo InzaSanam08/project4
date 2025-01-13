@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'student_addmission.dart';
+
 
 adminPanel(){
 print('hello wellcome to admin panel ');
@@ -37,6 +39,18 @@ else{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 schoolData(){
 
 print('if you want to see new admissions in school enter number 1');
@@ -55,9 +69,3 @@ if (adminInput == 1) {
 
 
 }
-
-
-
-
-
-

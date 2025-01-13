@@ -8,15 +8,22 @@ import 'student_addmission.dart';
 import 'students_data.dart';
 
 void main() {
-  print(' ===(  hello wellcome to GB school  )===');
 
-  print('===(  for inquairy about school please Enter digit 1  )===');
-  print('for admission please Enter digit 2');
-  print('for payment please Enter digit 3');
-  print('for exams and results please Enter digit 4');
-  print('parental acces please Enter digit 5');
-  print('for admin panel please Enter digit 6');
-  print('come to main page Enter digit 7');
+  print('''
+  ===================================                            
+=====    wellcome to GB school    =====
+  =================================== 
+ ''');
+
+  print('''
+  1. for inquairy about school please Enter digit 1
+  2. for admission please Enter digit 2
+  3. for payment please Enter digit 3
+  4. for exams and results please Enter digit 4
+  5. parental acces please Enter digit 5
+  6. for admin panel please Enter digit 6
+  7. come to main page Enter digit 7
+  ''');
 
 
   int userInput = int.parse(stdin.readLineSync()!);

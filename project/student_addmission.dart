@@ -142,6 +142,22 @@ studentsData.add({'student Name': studentName});
     print(studentsData.last);
   }
 
+
+   while (true) {
+      print('Enter your address:');
+       
+       bool isPaid = bool.parse(stdin.readLineSync()!);
+
+      if (isPaid==true ) {
+        
+         studentsData.last.addAll({'isPaid':isPaid });
+        break;
+      } else {
+        print('You did not paid fess:');
+      }
+    }
+
+
   // Map<String, dynamic> student = {
   //   'studentName': studentName,
   //   'father name': studentFatherName,

@@ -1,34 +1,91 @@
 import 'dart:io';
 
-void main() {
+import 'student_addmission.dart';
+
+schoolPayment() {
+  List alllist = [];
+
+  alllist = oldstudentsData + newAdmissionStudentData;
+
   print('for school Admission payment enter digit 1  ');
-
-  print('for School tuetion  payment enter digit 2  ');
-
-  print('for exam payment enter digit 3  ');
-
-  print('for School picnic payment enter digit 4  ');
 
   var userInput = stdin.readLineSync();
 
-  if (userInput == 1) {
-    schoolPayment();
-  } else if (userInput == 2) {
-    tutionpayment();
-  } else if (userInput == 3) {
-    examPayment();
-  } else if (userInput == 4) {
-    picnicPayment();
+  if (userInput == '1') {
+
+//    user will enter name
+  print('please enter your name ');
+  String username = stdin.readLineSync()!;
+//   for accces key from list
+  for (var i in alllist) {
+    if (username.isNotEmpty && alllist[i].containskey(username)) {
+      print('user name found');
+    } else {
+      print('user name not found');
+    }
+  }
+
+
   } else {
     print("This key not exist");
   }
+
+  
 }
 
-schoolPayment() {}
 
-tutionpayment() {}
 
-examPayment() {}
 
-picnicPayment() {}
 
+
+
+
+
+
+
+
+
+
+
+
+
+// import 'dart:io';
+
+// import 'student_addmission.dart';
+
+
+// List alllist = [];
+
+
+
+
+// alllist = oldstudentsData+newAdmissionStudentData;
+
+
+//   print('for school Admission payment enter digit 1  ');
+
+//   var userInput = stdin.readLineSync();
+
+//   if (userInput == '1') {
+//     schoolPayment();
+//   } else {
+//     print("This key not exist");
+//   }
+
+// schoolPayment() {
+
+
+
+//   //    user will enter name
+// print('please enter your name ');
+// String username = stdin.readLineSync()!;
+// //   for accces key from list
+// for (var i in alllist) {
+
+// if (username.isNotEmpty  && alllist[i].containskey(username)) {
+//   print('user name found');
+// } else {
+//   print('user name not found');
+// }  
+// }
+// }

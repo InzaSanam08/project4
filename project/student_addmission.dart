@@ -1,46 +1,46 @@
+import 'dart:io';
 
-
-
-
- import 'dart:io';
-
- List<Map<String, dynamic>> newAdmissionStudentData = [];
- List<Map<String, dynamic>> oldstudentsData = [
+List<Map<dynamic, dynamic>> newAdmissionStudentData = [];
+List<Map<dynamic, dynamic>> oldstudentsData = [
   {
-     'rehman ali':{
-    'father name': 'imran ali',
-    'age': 19,
-    'date of birth': '23/1/2022',
-    'address': 'dHA phase the rooling park',
-    'ispayed': '3000'}
+    'rehman ali': {
+      'father name': 'imran ali',
+      'age': 19,
+      'date of birth': '23/1/2022',
+      'address': 'dHA phase the rooling park',
+      'ispayed': '3000'
+    }
   },
   {
-     'sajad ali':{
-    'father name': 'dawood alam',
-    'age': 12,
-    'date of birth': '2/12/2000',
-    'address': 'malir quaid abad karachi',
-    'ispayed': '3000'}
+    'sajad ali': {
+      'father name': 'dawood alam',
+      'age': 12,
+      'date of birth': '2/12/2000',
+      'address': 'malir quaid abad karachi',
+      'ispayed': '3000'
+    }
   },
   {
-     ' ali':{
-    'father name': 'ahmed ali',
-    'age': 10,
-    'date of birth': '2/1/2012',
-    'address': 'gulshan e iqbal khokhar park',
-    'ispayed': '3000'}
+    ' ali': {
+      'father name': 'ahmed ali',
+      'age': 10,
+      'date of birth': '2/1/2012',
+      'address': 'gulshan e iqbal khokhar park',
+      'ispayed': '3000'
+    }
   },
   {
-     'jameel':{
-    'father name': 'babar ali',
-    'age': 11,
-    'date of birth': '2/12/2013',
-    'address': 'malir karachi',
-    'ispayed': 'no pay found'  }
+    'jameel': {
+      'father name': 'babar ali',
+      'age': 11,
+      'date of birth': '2/12/2013',
+      'address': 'malir karachi',
+      'ispayed': 'no pay found'
+    }
   }
- ];
+];
 
- void studentadmission() {
+void studentadmission() {
   bool isadmitted = true;
   while (isadmitted) {
     // Get Student Name
@@ -63,7 +63,8 @@
       String studentFatherName = stdin.readLineSync()!;
 
       if (studentFatherName.isNotEmpty) {
-        (newAdmissionStudentData.last[studentName] ).addAll({'student father Name': studentFatherName});
+        (newAdmissionStudentData.last[studentName])
+            .addAll({'student father Name': studentFatherName});
         break;
       } else {
         print('You did not enter father name correctly.');
@@ -76,7 +77,8 @@
       String studentAge = stdin.readLineSync()!;
 
       if (studentAge.isNotEmpty) {
-        (newAdmissionStudentData.last[studentName] ).addAll({'studentAge': studentAge});
+        (newAdmissionStudentData.last[studentName])
+            .addAll({'studentAge': studentAge});
         break;
       } else {
         print('You did not enter age correctly.');
@@ -89,7 +91,8 @@
       String studentDateOfBirth = stdin.readLineSync()!;
 
       if (studentDateOfBirth.isNotEmpty) {
-        (newAdmissionStudentData.last[studentName] ).addAll({'student Date Of Birth': studentDateOfBirth});
+        (newAdmissionStudentData.last[studentName])
+            .addAll({'student Date Of Birth': studentDateOfBirth});
         break;
       } else {
         print('You did not enter date of birth correctly.');
@@ -102,7 +105,8 @@
       String studentAddress = stdin.readLineSync()!;
 
       if (studentAddress.isNotEmpty) {
-        (newAdmissionStudentData.last[studentName]).addAll({'studentAddress': studentAddress});
+        (newAdmissionStudentData.last[studentName])
+            .addAll({'studentAddress': studentAddress});
         break;
       } else {
         print('You did not enter address correctly.');
@@ -117,22 +121,21 @@
       String isPaid = stdin.readLineSync()!;
 
       if (isPaid == '3000') {
-        (newAdmissionStudentData.last[studentName] ).addAll({'isPaid': isPaid});
+        (newAdmissionStudentData.last[studentName]).addAll({'isPaid': isPaid});
         break;
       } else if (isPaid.isEmpty) {
-        print('You did not pay the admission fees. GB school gives you time of 1 month.');
-        (newAdmissionStudentData.last[studentName]).addAll({'isPaid': 'User will pay after one month'});
+        print(
+            'You did not pay the admission fees. GB school gives you time of 1 month.');
+        (newAdmissionStudentData.last[studentName])
+            .addAll({'isPaid': 'User will pay after one month'});
         break;
       } else {
         print('You did not pay the fees.');
       }
-
-
-
     }
 
     // Admission process completed
-     print(newAdmissionStudentData);
+    print(newAdmissionStudentData);
     print("If you want to add more students, enter 'yes'");
     print("If you want to close the program, enter 'no'");
     print("If you want to go back to the main menu, enter 'back'");

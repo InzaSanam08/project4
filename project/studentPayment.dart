@@ -12,22 +12,46 @@ schoolPayment() {
 
   if (userInput == '1') {
 //    user will enter name
-
-    print('please enter your name ');
+ bool isstudentFound =true; 
+   while (isstudentFound) {
+     
+      print('please enter your name ');
     String username = stdin.readLineSync()!;
 //   for accces key from list
     for (var i in alllist) {
       if (userInput!.isNotEmpty) {
         if (i.keys.contains(username)) {
+
           print('user name found ${i.keys}');
+
           print('please enter amount');
 
-          break;
+                    isstudentFound = false;
         } else {
           print('user name not found in Record');
+          print('if you want to run again this program Enter ok');
+          print('if you want to exit the program Enter exit');
+
+          String userinput = stdin.readLineSync()!;
+          if (userinput== 'ok') {
+            isstudentFound == true;
+          } 
+          else if (userinput == 'exit'){
+                      isstudentFound==false;
+          }
+
+          else {
+            print("key does not found");
+          }
         }
-      } else {}
+
+      
+      } 
     }
+
+
+
+   }
   } else {
     print("This key not exist");
   }

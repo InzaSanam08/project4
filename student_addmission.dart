@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'main.dart';
+
 List<Map<dynamic, dynamic>> newAdmissionStudentData = [];
 List<Map<dynamic, dynamic>> oldstudentsData = [
   {
@@ -121,12 +123,12 @@ void studentadmission() {
       String isPaid = stdin.readLineSync()!;
 
       if (isPaid == '3000') {
-        (newAdmissionStudentData.last[studentName]).addAll({'isPaid': isPaid});
+        newAdmissionStudentData.last[studentName].addAll({'isPaid': isPaid});
         break;
       } else if (isPaid.isEmpty) {
         print(
             'You did not pay the admission fees. GB school gives you time of 1 month.');
-        (newAdmissionStudentData.last[studentName])
+        newAdmissionStudentData.last[studentName]
             .addAll({'isPaid': 'User will pay after one month'});
         break;
       } else {
@@ -136,9 +138,16 @@ void studentadmission() {
 
     // Admission process completed
     print(newAdmissionStudentData);
-    print("If you want to add more students, enter 'yes'");
-    print("If you want to close the program, enter 'no'");
-    print("If you want to go  main menu, enter 'back'");
+
+    print('''
+
+1 ==>   If you want to add more students, enter 'yes'
+
+2 ==>   If you want to close the program, enter 'no'
+
+3 ==>   If you want to go  main menu, enter 'back'
+
+''');
 
     String userInput = stdin.readLineSync()!;
 
@@ -146,6 +155,7 @@ void studentadmission() {
       isadmitted = true;
       print('Program is continuing.');
     } else if (userInput == 'back') {
+    mainn();
       isadmitted = false;
       // Call your main function here
       // mainn();

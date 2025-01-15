@@ -1,11 +1,13 @@
-import 'dart:async';
 import 'dart:io';
 
 import 'main.dart';
 import 'student_addmission.dart';
 
+List<Map<dynamic, dynamic>> allList = oldstudentsData + newAdmissionStudentData;
+
 adminPanel() {
-  
+
+
 
   print('hello wellcome to admin panel ');
   print('================================== ');
@@ -37,80 +39,112 @@ adminPanel() {
 }
 
 schoolData() {
-
   print('if you want to see new admissions in school enter number 1');
 
-  print(
-      'if you want to eleminate students enter number  enter 2');
+  print('if you want to eleminate students enter number  enter 2');
 
   print('if you want to see old students data students enter number 3');
 
-  print(  " If you Want to go main menu Enter 4");
+  print(" If you Want to go main menu Enter 4");
+
   var adminInput = stdin.readLineSync()!;
 
   if (adminInput == '1') {
-   print( newAdmissionStudentData);
+    newStudentsAdmissionList();
   } else if (adminInput == '2') {
-  delete();
-  }
-  else if(adminInput == '3'){
-   print (oldstudentsData);
-
-  }
-
-else if (adminInput == '4') {
+    delete();
+  } else if (adminInput == '3') {
+ oldStudentsAdmissionList();
+  } else if (adminInput == '4') {
     mainn();
-  }
-
-
-   else {
+  } else {
     print('this key does not exist');
   }
 }
 
-
-delete (){ 
+newStudentsAdmissionList() {
+  print(newAdmissionStudentData);
+  print('''
   
-print(oldstudentsData);
+1 ==>  If you want to go back 'main menu' Enter 'back'    
+2 ==>  If you want to exit programm Enter any button 
+  ''');
+
+  String userInPut = stdin.readLineSync()!;
+
+  if (userInPut == 'back') {
+    mainn();
+  } else {
+    print('Program Exit');
+  }
+}
+/////////////////////////
+
+oldStudentsAdmissionList() {
+  print(oldstudentsData);
+  print('''
+  
+1 ==>  If you want to go back 'main menu' Enter 'back'    
+2 ==>  If you want to exit programm Enter any button 
+  ''');
+
+  String userInPut = stdin.readLineSync()!;
+
+  if (userInPut == 'back') {
+    mainn();
+  } else {
+    print('Program Exit');
+  }
+}
+
+
+
+
+/////////   delete studen data 
+
+delete() {
+
+print(' here is all student data ');
+
+print(allList);
 
   print('Enter Student name');
-    String studentName=stdin.readLineSync()!;
+  String studentName = stdin.readLineSync()!;
+ 
+bool isFound  = true;
 
-    for (var i in oldstudentsData) {
+   for (var i in allList) {
+    if (i.containsKey(studentName)) {
+     
+    i.remove(studentName); 
+    isFound= false;
+    } }
+if (isFound) { 
+  print('Student $studentName has been removed.'); 
+  }
+   else { print('Name not found in the list.'); }
 
-    i.remove(i[studentName]);
     print('All Data Of Students $oldstudentsData');
 
- print('if you want to go back main menu Enter back');
+    print('if you want to go back main menu Enter back');
 
-      bool iscontinue = true;
-            while (iscontinue) {
-              
-            
-            String userinput = stdin.readLineSync()!;
-            
-            if (userinput != null && userinput== 'back') {
-              mainn();
-              iscontinue=false;
-            } 
-            else if (userinput == null ){
-              print('you did not entered back to go main menu ');
-              print('please enter back');
-            iscontinue= true;
-            }
-            else {
-              print('no any key found ');
-            }  
+    bool iscontinue = true;
+    while (iscontinue) {
+      String userinput = stdin.readLineSync()!;
 
-    break;
+      if (userinput != null && userinput == 'back') {
+        mainn();
+        iscontinue = false;
+      } else if (userinput == null) {
+        print('you did not entered back to go main menu ');
+        print('please enter back');
+        iscontinue = true;
+      } else {
+        print('no any key found ');
+        iscontinue = true;
+      }
 
+      break;
     }
-   
-
-   
- 
-  }
-
-
-
+  
 }

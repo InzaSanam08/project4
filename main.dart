@@ -25,7 +25,7 @@ mainn() {
   4. for exams and results please Enter digit 4
   5. parental acces please Enter digit 5
   6. for admin panel please Enter digit 6
-  7. come to main page Enter digit 7
+  7. If you Exit press 'Enter'
 
   ''');
 

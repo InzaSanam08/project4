@@ -28,24 +28,34 @@ adminPanel() {
       islogin = false;
       schoolData();
     } else if (adminEmail != 'haseebgmail.com') {
-      print('email bhool gai kia bhulakar insaan yaad kar or phir se try kar');
+      print('your email is incorrect try again ');
       adminEmail = stdin.readLineSync()!;
     } else {
-      print(
-          'password bhool gai kia bhulakar insaan yaad kar or phir se try kar');
+      print('your password is incorrect try again ');
       adminPassword = stdin.readLineSync()!;
     }
   }
 }
 
 schoolData() {
-  print('if you want to see new admissions in school enter number 1');
+   
 
-  print('if you want to eleminate students enter number  enter 2');
+  print('''
 
-  print('if you want to see old students data students enter number 3');
+   ===================================                            
+=====         Admin panel          =====
+  =================================== 
 
-  print(" If you Want to go main menu Enter 4");
+
+1. ==>  if you want to see new admissions in school enter number 1
+
+2. ==>  if you want to eleminate students enter number  enter 2
+
+3. ==>  if you want to see old students data students enter number 3
+
+4. ==>  If you Want to go main menu Enter 4
+
+''');
 
   var adminInput = stdin.readLineSync()!;
 
@@ -127,24 +137,22 @@ if (isFound) {
     print('All Data Of Students $oldstudentsData');
 
     print('if you want to go back main menu Enter back');
-
-    bool iscontinue = true;
+ bool iscontinue = true;
     while (iscontinue) {
+  print("1.  if yiu want to go back main menu Enter 'back' ");
+  print('2.  If You want to Exit program Enter any key ');
       String userinput = stdin.readLineSync()!;
 
       if (userinput != null && userinput == 'back') {
         mainn();
         iscontinue = false;
-      } else if (userinput == null) {
-        print('you did not entered back to go main menu ');
-        print('please enter back');
-        iscontinue = true;
-      } else {
-        print('no any key found ');
+      }  else {
+        print('program Exit');
         iscontinue = true;
       }
 
       break;
     }
-  
+
+
 }

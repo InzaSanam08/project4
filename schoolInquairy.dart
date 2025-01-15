@@ -1,11 +1,9 @@
-
-  import 'dart:io';
+import 'dart:io';
 
 import 'main.dart';
 
-schoolInquairy(){
-
-print('''
+schoolInquairy() {
+  print('''
  
    ===================================                            
 ===== Wellcom inquairy about school =====
@@ -26,42 +24,29 @@ print('''
 
 ''');
 
-var userInPut= stdin.readLineSync();
+  var userInPut = stdin.readLineSync();
 
-if(userInPut == "1"){
-  AboutSchool();
+  if (userInPut == "1") {
+    AboutSchool();
+  } else if (userInPut == "2") {
+    SchoolRules();
+  } else if (userInPut == "3") {
+    AgeCrateria();
+  } else if (userInPut == "4") {
+    DocumentRequired();
+  } else if (userInPut == "5") {
+    HealthandSafetyPolicies();
+  } else if (userInPut == "6") {
+    mainn();
+  } else {
+    print("This Do's Not exist");
+  }
 }
-else if (userInPut == "2") {
-  SchoolRules();
-}
-else if (userInPut == "3") {
-  AgeCrateria(); 
-}
-
-else if (userInPut== "4") {
-  DocumentRequired();
-}
-
-else if (userInPut== "5") {
-  HealthandSafetyPolicies();
-}
-
-else if (userInPut == "6") {
-  mainn();
-}
-
- else {
-
- print("This Do's Not exist");
-
-}
- }
-
 
 // About School
 
-AboutSchool(){
-print(''' 
+AboutSchool() {
+  print('''
 
   ===================================                            
 =====  hello wellcome to GB school =====
@@ -88,12 +73,11 @@ print('''
 10. Community Spirit: Promoting inclusivity, respect for diversity, and a strong sense of community.
 
 ''');
-
 }
 
 // about School Rules
-SchoolRules(){
-  print( '''
+SchoolRules() {
+  print('''
 
   ===================================                            
 =====      GB School Rules       =====
@@ -122,9 +106,8 @@ SchoolRules(){
 
 //about Age Crateria
 
-AgeCrateria(){
-
-print('''
+AgeCrateria() {
+  print('''
 
   ===================================                            
 =====      Age Crataria           =====
@@ -150,7 +133,7 @@ print('''
 
 // about Document Required
 
-DocumentRequired(){
+DocumentRequired() {
   print('''
 
   ===================================                            
@@ -178,8 +161,8 @@ DocumentRequired(){
 
 // about Health and Safety Policies
 
-HealthandSafetyPolicies(){
-  print('''   
+HealthandSafetyPolicies() {
+  print('''
 
   ===================================                            
 =====  Health and Safety Policies =====

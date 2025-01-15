@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'main.dart';
+
 
 parentalAcces() {
 
@@ -15,6 +17,7 @@ parentalAcces() {
 1. If you Want to see Result Enter 1
 2. If you Want to see Attendance Enter 2
 3. If you Want to see Monthly Report Enter 3 
+4. If you Want to go main menu Enter 4
 ''');
 
   var studentParents = stdin.readLineSync();
@@ -36,7 +39,15 @@ parentalAcces() {
     attendance();
   } else if (studentParents == '3') {
     monthlyReport();
-  } else {
+  }
+  
+ else if (studentParents == '4') {
+    mainn();
+  }
+
+
+
+   else {
     print('This Key Does Not Exist');
   }
 

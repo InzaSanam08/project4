@@ -1,3 +1,5 @@
+import 'student_addmission.dart';
+
 dataOsStudents() {
   List<Map<dynamic, dynamic>> studentsData = [
    
@@ -36,22 +38,21 @@ dataOsStudents() {
   
   ];
 
-  print(studentsData);
+newAdmissionStudentData;
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
 
 
-
-// studentPayment() {
-// // Admission Fee	20,000
-// // Monthly Tuition Fee	10,000
-// // Annual Development Fee	5,000
-// // Examination Fee	2,000
-// // Sports Fee	1,500
-// // Lab Fee (Science/IT)	3,000
-// // Library Fee	1,000
-// // Transportation Fee	3,500
-
-
-// }

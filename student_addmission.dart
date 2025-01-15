@@ -138,7 +138,7 @@ void studentadmission() {
     print(newAdmissionStudentData);
     print("If you want to add more students, enter 'yes'");
     print("If you want to close the program, enter 'no'");
-    print("If you want to go back to the main menu, enter 'back'");
+    print("If you want to go  main menu, enter 'back'");
 
     String userInput = stdin.readLineSync()!;
 

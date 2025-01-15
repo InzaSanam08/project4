@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'main.dart';
 import 'student_addmission.dart';
 
 void schoolPayment() {
@@ -11,22 +12,47 @@ void schoolPayment() {
 
   if (userInput == '1') {
     print('Please enter your name:');
-    String? username = stdin.readLineSync()?.trim();
+    String? studentName = stdin.readLineSync()?.trim();
 
-    if (username != null && username.isNotEmpty) {
+    if (studentName != null && studentName.isNotEmpty) {
       bool userFound = false;
 
       for (var student in allList) {
-        if (student.containsKey(username)) {
+        if (student.containsKey(studentName)) {
           userFound = true;
-          print('User name found: ${student[username]}');
+          print('User name found: ${student[studentName]}');
           print('Please enter amount: 3000');
 
-          String? userPayment = stdin.readLineSync()?.trim();
+          String? studentPayment = stdin.readLineSync()?.trim();
 
-          if (userPayment != null && userPayment == '3000') {
-            student[username]['isPaid'] = userPayment;
-            print('Payment status updated: ${student[username]['isPaid']}');
+          if (studentPayment != null && studentPayment == '3000') {
+            student[studentName]['isPaid'] = studentPayment;
+            print('Payment status updated: ${student[studentName]['isPaid']}');
+
+           // while loop for go back to home
+
+                 {
+
+                  bool iscontinue = true;
+            while (iscontinue) {
+              print('if you want to go back main menu Enter back');
+            
+            String userinput = stdin.readLineSync()!;
+            
+            if (userinput != null && userinput== 'back') {
+              mainn();
+              iscontinue=false;
+            } 
+            else if (userinput == null ){
+              print('you did not entered back to go main menu ');
+              print('please enter back');
+            iscontinue= true;
+            }
+            else {
+              print('no any key found ');
+            }  
+            } }
+
           } else {
             print('Please enter a valid amount.');
           }
@@ -46,7 +72,7 @@ void schoolPayment() {
         }
       }
     } else {
-      print('Invalid username input.');
+      print('Invalid studentName input.');
     }
   } else {
     print('Invalid option selected.');

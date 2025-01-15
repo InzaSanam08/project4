@@ -1,6 +1,8 @@
 
   import 'dart:io';
 
+import 'main.dart';
+
 schoolInquairy(){
 
 print('''
@@ -10,15 +12,19 @@ print('''
   =================================== 
  
 
-1  ==>  if want to know about School Enter 1
+1  ==>  if want to know about School Enter  1
   
-2  ==>   If you want to know about School Rules Enter 2
+2  ==>   If you want to know about School Rules Enter  2
 
-3  ==>   Age crateria for school Enter 3
+3  ==>   Age crateria for school Enter  3
 
-4  ==>   Document Required for admission Enter 4
+4  ==>   Document Required for admission Enter  4
 
-5  ==>   Health and Safety policies Enter 5 ''');
+5  ==>   Health and Safety policies Enter  5
+
+6  ==>   Health and Safety policies Enter  6
+
+''');
 
 var userInPut= stdin.readLineSync();
 
@@ -39,6 +45,11 @@ else if (userInPut== "4") {
 else if (userInPut== "5") {
   HealthandSafetyPolicies();
 }
+
+else if (userInPut == "6") {
+  mainn();
+}
+
  else {
 
  print("This Do's Not exist");

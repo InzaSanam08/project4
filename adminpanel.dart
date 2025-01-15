@@ -36,20 +36,17 @@ schoolData() {
   print('if you want to see new admissions in school enter number 1');
 
   print(
-      'if you want to see monthley payments of school students enter number  enter 2');
+      'if you want to eleminate students enter number  enter 2');
 
   print('if you want to see attendance of students enter number 3');
 
   var adminInput = stdin.readLineSync()!;
 
   if (adminInput == '1') {
-    newAdmissionStudentData;
+   print( newAdmissionStudentData);
   } else if (adminInput == '2') {
-    var allStudentsData = oldstudentsData + newAdmissionStudentData;
-    
-  var payedStudents  =  allStudentsData.where((e)=>e['isPayed']=='3000' ).toList();
-    
-    print(payedStudents);
+   delete();
+ 
   }
   else if(adminInput == '3'){
     
@@ -58,3 +55,13 @@ schoolData() {
     print('this key does not exist');
   }
 }
+
+
+delete (){ 
+  
+  List<Map<dynamic,dynamic>> allStudentsData = oldstudentsData + newAdmissionStudentData;
+  print('Enter Student name');
+    String studentName=stdin.readLineSync()!;
+    allStudentsData.remove(studentName);
+    print('All Data Of Students $allStudentsData');
+  }

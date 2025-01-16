@@ -4,14 +4,17 @@ import 'main.dart';
 import 'student_addmission.dart';
 
 void schoolPayment() {
+
+
+
   List<Map<dynamic, dynamic>> allList = oldstudentsData + newAdmissionStudentData;
 
-  print('For school admission payment enter digit 1');
+  print('--:  For school admission payment enter digit    1   :--');
 
   String? userInput = stdin.readLineSync()?.trim();
 
   if (userInput == '1') {
-    print('Please enter your name:');
+    print('--:  Please enter your name  :--');
     String? studentName = stdin.readLineSync()?.trim();
 
     if (studentName != null && studentName.isNotEmpty) {
@@ -21,7 +24,7 @@ void schoolPayment() {
         if (student.containsKey(studentName)) {
           userFound = true;
           print('User name found: ${student[studentName]}');
-          print('Please enter amount: 3000');
+          print('--:  Please enter amount: 3000  :--');
 
           String? studentPayment = stdin.readLineSync()?.trim();
 
@@ -35,7 +38,7 @@ void schoolPayment() {
 
                   bool iscontinue = true;
             while (iscontinue) {
-              print('if you want to go back main menu Enter back');
+              print('--:  if you want to go back main menu Enter back  :--');
             
             String userinput = stdin.readLineSync()!;
             
@@ -44,38 +47,38 @@ void schoolPayment() {
               iscontinue=false;
             } 
             else if (userinput == null ){
-              print('you did not entered back to go main menu ');
-              print('please enter back');
+              print('--:  you did not entered back to go main menu  :--');
+              print('--:  please enter back  :--');
             iscontinue= true;
             }
             else {
-              print('no any key found ');
+              print('--:  no any key found  :--');
             }  
             } }
 
           } else {
-            print('Please enter a valid amount.');
+            print('--:  Please enter a valid amount  :--');
           }
           break;
         }
       }
 
       if (!userFound) {
-        print('User name not found in records.');
-        print('If you want to run the program again, enter "ok". To exit, enter "exit".');
+        print('--:  User name not found in records  :--');
+        print('--:  If you want to run the program again, enter "ok". To exit, enter "exit"  :--');
 
         String? userRetry = stdin.readLineSync()?.trim();
         if (userRetry != null && userRetry == 'ok') {
           schoolPayment();
         } else {
-          print('Exiting the program.');
+          print('--:  Exiting the program  :--');
         }
       }
     } else {
-      print('Invalid studentName input.');
+      print('--:  Invalid studentName input  :--');
     }
   } else {
-    print('Invalid option selected.');
+    print('--:  Invalid option selected  :--');
   }
 }
 

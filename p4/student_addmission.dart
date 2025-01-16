@@ -48,20 +48,20 @@ void studentadmission() {
     // Get Student Name
     late String studentName;
     while (true) {
-      print('Enter student name:');
+      print('--:  Enter student name  :--');
       studentName = stdin.readLineSync()!;
 
       if (studentName.isNotEmpty) {
         newAdmissionStudentData.add({studentName: {}});
         break;
       } else {
-        print('You did not enter the name correctly.');
+        print('--:  You did not enter the name correctly  :--');
       }
     }
 
     // Get Student Father Name
     while (true) {
-      print('Enter student father name:');
+      print('--:  Enter student father name  :--');
       String studentFatherName = stdin.readLineSync()!;
 
       if (studentFatherName.isNotEmpty) {
@@ -69,13 +69,13 @@ void studentadmission() {
             .addAll({'student father Name': studentFatherName});
         break;
       } else {
-        print('You did not enter father name correctly.');
+        print('--:  You did not enter father name correctly   :--');
       }
     }
 
     // Get Student Age
     while (true) {
-      print('Enter student age:');
+      print('--:  Enter student age  :--');
       String studentAge = stdin.readLineSync()!;
 
       if (studentAge.isNotEmpty) {
@@ -83,13 +83,13 @@ void studentadmission() {
             .addAll({'studentAge': studentAge});
         break;
       } else {
-        print('You did not enter age correctly.');
+        print('--:  You did not enter age correctly  :--');
       }
     }
 
     // Get Student Date of Birth
     while (true) {
-      print('Enter student date of birth (e.g., 23/2/2025):');
+      print('--:  Enter student date of birth (e.g., 23/2/2025)  :--');
       String studentDateOfBirth = stdin.readLineSync()!;
 
       if (studentDateOfBirth.isNotEmpty) {
@@ -97,7 +97,7 @@ void studentadmission() {
             .addAll({'student Date Of Birth': studentDateOfBirth});
         break;
       } else {
-        print('You did not enter date of birth correctly.');
+        print('--:  You did not enter date of birth correctly  :--');
       }
     }
 
@@ -111,14 +111,14 @@ void studentadmission() {
             .addAll({'studentAddress': studentAddress});
         break;
       } else {
-        print('You did not enter address correctly.');
+        print('--:  You did not enter address correctly  :--');
       }
     }
 
     // School fee payment
     while (true) {
-      print('Please pay RS: 3000');
-      print('If you do not want to pay now, then please press enter');
+      print('--:  Please pay RS: 3000  :--');
+      print('--:  If you do not want to pay now, then please press enter  :--');
 
       String isPaid = stdin.readLineSync()!;
 
@@ -127,12 +127,12 @@ void studentadmission() {
         break;
       } else if (isPaid.isEmpty) {
         print(
-            'You did not pay the admission fees. GB school gives you time of 1 month.');
+            '--:  You did not pay the admission fees. GB school gives you time of 1 month  :--');
         newAdmissionStudentData.last[studentName]
             .addAll({'isPaid': 'User will pay after one month'});
         break;
       } else {
-        print('You did not pay the fees.');
+        print('--:  You did not pay the fees  :--');
       }
     }
 
@@ -141,27 +141,28 @@ void studentadmission() {
 
     print('''
 
-1 ==>   If you want to add more students, enter 'yes'
+1   ==>   If you want to add more students, enter 'yes'
 
-2 ==>   If you want to close the program, enter 'no'
+2   ==>   If you want to close the program, enter 'no'
 
-3 ==>   If you want to go  main menu, enter 'back'
+3   ==>   If you want to go  main menu, enter 'back'
 
 ''');
 
     String userInput = stdin.readLineSync()!;
 
     if (userInput == 'yes') {
+  
       isadmitted = true;
-      print('Program is continuing.');
+      print('--:  Program is continuing  :--');
     } else if (userInput == 'back') {
-    mainn();
+      mainn();
       isadmitted = false;
       // Call your main function here
       // mainn();
     } else {
       isadmitted = false;
-      print('Program exited.');
+      print('--:  Program exited  :--');
     }
   }
 }
